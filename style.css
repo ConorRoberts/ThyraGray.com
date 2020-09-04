@@ -151,6 +151,32 @@ main{
     margin: 0 auto;
 }
 
+main section{
+    margin:5vh 0;
+}
+
+.about-container div{
+    display:flex;
+}
+
+.skills-container,.education-container{
+    display:flex;
+    flex-direction:column;
+    /* font-size:1.5rem; */
+    width:50%;
+}
+
+.skills-container h3,.education-container h3{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:2rem;
+}
+
+.skills-container p,.education-container p{
+    font-size:1.8rem;
+    padding:0.5rem 0;
+}
+
 /* MEDIA QUERIES */
 @media (max-width:1200px){
     .intro-container{
