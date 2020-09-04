@@ -1,3 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 *{margin:0;padding:0;box-sizing:border-box;}
 html{font-size:62.5%;font-family:'Open Sans',sans-serif;}
+
+nav{
+    position:relative;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:1.8rem;
+    padding-left:1rem;
+}
+
+nav ul{
+    display:flex;
+    list-style-type:none;
+}
+
+nav a{
+    padding:1rem 2rem;
+    color:black;
+    text-decoration:none;
+    display:inline-block;
+    transition:background-color 300ms;
+}
+
+nav a:hover{
+    background-color:rgba(128, 128, 128, 0.308);
+}
+
+header{
+    background-image:linear-gradient(to right,rgba(104, 104, 245, 0.219),rgba(104, 104, 245, 0.219)),url(assets/toronto-bg.jpg);
+    background-size:cover;
+    width:100%;
+    height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.intro-container{
+    display:flex;
+    flex-direction:column;
+    background-color:white;
+    border:1px solid black;
+    width:35%;
+    position:relative;
+}
+
+.intro-content{
+    display:flex;
+}
+
+.intro-socials{
+    width:100%;
+    background-color:rgb(88, 88, 248);
+}
+
+.intro-socials ul{
+    display:flex;
+    padding:1rem;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:100%;
+    list-style-type:none;
+}
+
+.intro-socials a{
+    font-size:3rem;
+    text-align:center;
+    color:white;
+    text-decoration:none;
+    padding:0.5rem 1rem;
+    display:inline-block;
+}
+
+.intro-socials a p{
+    font-size:1.5rem;
+}
+
+.headshot-img{
+    width:50%;
+    height:auto;
+}
