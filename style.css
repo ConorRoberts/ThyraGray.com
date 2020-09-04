@@ -4,7 +4,8 @@ html{font-size:62.5%;font-family:'Roboto',sans-serif;}
 
 /* COLOURS 
 
-    MAIN ACCENT:rgb(0, 77, 243);
+    MAIN ACCENT:rgb(0, 45, 141);
+    MAIN: rgb(23,38,81)
 
 */
 
@@ -30,10 +31,16 @@ h1{
     font-weight:500;
 }
 
+h2{
+    padding:2rem;
+    font-size:4.5rem;
+    text-align:center;
+}
+
 /* END TEXT */
 
 nav{
-    position:relative;
+    position:sticky;
     top:0;
     left:0;
     width:100%;
@@ -42,6 +49,9 @@ nav{
     align-items:center;
     font-size:2rem;
     padding-left:1rem;
+    background-color:white;
+    z-index:10;
+    filter:drop-shadow(0 0 4px rgba(0, 0, 0, 0.712));
 }
 
 nav ul{
@@ -54,11 +64,13 @@ nav a{
     color:black;
     text-decoration:none;
     display:inline-block;
-    transition:background-color 300ms;
+    transition-property:color background-color;
+    transition-duration:300ms;
 }
 
 nav a:hover{
-    background-color:rgba(128, 128, 128, 0.308);
+    color:white;
+    background-color:rgb(0, 45, 141);
 }
 
 header{
@@ -76,8 +88,9 @@ header{
     flex-direction:column;
     background-color:white;
     border:1px solid black;
-    /* width:35%; */
-    max-width:40%;
+    filter:drop-shadow(0 0 10px rgba(0, 0, 0, 0.575));
+    max-width:40vw;
+    height:auto;
 }
 
 .intro-content{
@@ -86,7 +99,6 @@ header{
 
 .intro-socials{
     width:100%;
-    /* background-color:rgb(88, 88, 248); */
     background-color:rgb(23,38,81);
 }
 
@@ -117,9 +129,7 @@ header{
 }
 
 .headshot-img{
-    /* width:50%; */
     width:50%;
-    /* visibility:hidden; */
 }
 
 .info-module{
@@ -127,7 +137,6 @@ header{
 }
 
 .headshot-container{
-    /* filter:drop-shadow(0.03rem 0.03rem 3px black); */
     width:50%;
     overflow:hidden;
     background-color:red;
@@ -135,4 +144,35 @@ header{
 
 .name-container{
     margin-bottom:25%;
+}
+
+main{
+    width:70%;
+    margin: 0 auto;
+}
+
+/* MEDIA QUERIES */
+@media (max-width:1200px){
+    .intro-container{
+        max-width:95%;
+        filter:none;
+        position:relative;
+    }
+    .intro-content{
+        flex-direction:column;
+        width:100%;
+    }
+    .headshot-img{
+        width:100%;
+    }
+    .intro-text{
+        width:100%;
+    }
+    header{
+        height:auto;
+        padding:2rem 0 ;
+    }
+    nav a{
+        padding:1rem 1rem;
+    }
 }
