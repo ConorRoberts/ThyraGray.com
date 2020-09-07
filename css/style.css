@@ -40,10 +40,12 @@ h2 {
 
 h3 {
   font-size: 2.5rem;
+  font-weight: 400;
 }
 
 p {
   font-size: 1.8rem;
+  font-weight: 300;
 }
 
 /* END TEXT */
@@ -60,7 +62,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   font-size: 2rem;
-  padding-left: 1rem;
   background-color: white;
   z-index: 10;
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.712));
@@ -146,12 +147,13 @@ header {
   height: 100%;
 }
 
-main {
-  width: 70%;
-  margin: 0 auto;
-}
 main section {
   margin: 5vh 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 70%;
 }
 
 .about-container div {
@@ -171,14 +173,32 @@ main section {
   margin-bottom: 2rem;
 }
 
+.experience-wrapper {
+  background-color: #172651;
+  padding: 4vh 0;
+}
+
 .experience-container {
-  width: 70%;
   margin: 0 auto;
+  width: 70%;
+  padding: 4vh 0;
+  background-color: rgba(255, 255, 255, 0.897);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  filter: drop-shadow(0 0 15px black);
 }
 .experience-container .experience-module {
-  margin: 3rem 0;
+  width: 80%;
+  margin: 0.7rem 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.4);
   padding: 2rem;
-  color: black;
+  border-radius: 2px;
+}
+.experience-container .experience-module:last-child {
+  border-bottom: none;
 }
 .experience-container .experience-title-container {
   display: flex;

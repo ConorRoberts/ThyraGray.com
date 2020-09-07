@@ -44,9 +44,11 @@ h2 {
 }
 h3{
     font-size:2.5rem;
+    font-weight:400;
 }
 p{
     font-size: 1.8rem;
+    font-weight:300;
 }
 
 /* END TEXT */
@@ -64,7 +66,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   font-size: 2rem;
-  padding-left: 1rem;
   background-color: white;
   z-index: 10;
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.712));
@@ -157,56 +158,78 @@ width: 50%;
     height:100%;
 }
 
+@mixin wrapper(){
+  margin: 0 auto;
+  width:70%;
+}
 
 main {
-    width: 70%;
-  margin: 0 auto;
+  //   width: 70%;
+  // margin: 0 auto;
 
   section {
     margin: 5vh 0;
   }
 }
 
+.wrapper{
+  @include wrapper;
+}
+
+
 .about-container div {
   display: flex;
 }
 
 .skills-container, .education-container{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    p{
-        padding: 0.8rem 0;
-      }
-    h3{
-        text-align: center;
-        margin-bottom: 2rem;
-    }
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  p{
+    padding: 0.8rem 0;
+  }
+  h3{
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 }
 
+.experience-wrapper{
+  background-color:$main; 
+  padding: 4vh 0;
+}
 
 .experience-container{
-    width:70%;
-    margin: 0 auto;
+  @include wrapper;
+  // padding-top:15vh;
+  padding:4vh 0;
+  background-color:rgba(255, 255, 255, 0.897);
+  color:black;
+  display:flex;
+  flex-direction:column;
+  flex-wrap:wrap;
+  align-items:center;
+  filter:drop-shadow(0 0 15px black);
 
-    .experience-module{
-        margin: 3rem 0;
-        // border:2px solid $accent;
-        padding:2rem;
-        // border-radius:5px;
-        color:black;
-        // filter:drop-shadow(0 0 5px black);
+  .experience-module{
+    width:80%;
+    margin: 0.7rem 0;
+    border-bottom:1px solid rgba(grey,0.4);
+    padding:2rem;
+    border-radius:2px;
+    &:last-child{
+      border-bottom:none;
     }
-    
-    .experience-title-container{
-        display:flex;
-        justify-content:space-between;
-    }
+  }
+  
+  .experience-title-container{
+      display:flex;
+      justify-content:space-between;
+  }
 
-    ul p{
-        padding: 0.8rem 0;
-      }
-
+  ul p{
+      padding: 0.8rem 0;
+  }
 }
 
 /* MEDIA QUERIES */
