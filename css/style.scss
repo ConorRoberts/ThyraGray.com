@@ -106,8 +106,7 @@ header {
   background-color: white;
   border: 1px solid black;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.575));
-  max-width: 40vw;
-  height: auto;
+  max-width: 45vw;
   .intro-content {
       display: flex;
     }
@@ -136,20 +135,24 @@ header {
                 }
             }
         }
-    }
-    
+    }  
 }
 
 .intro-text {
-padding: 5rem;
-width: 50%;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
+  padding: 5rem;
+  width: 50%;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
 }
 
-.headshot-img {
-width: 50%;
+.headshot-container{
+  width:50%;
+  display:flex;
+  background-color:green;
+  .headshot-img {
+    max-width: 100%;
+  }
 }
 
 .info-module-container{
@@ -165,9 +168,6 @@ width: 50%;
 }
 
 main {
-  //   width: 70%;
-  // margin: 0 auto;
-
   section {
     margin: 5vh 0;
   }
@@ -176,7 +176,6 @@ main {
 .wrapper{
   @include wrapper;
 }
-
 
 .about-container div {
   display: flex;
@@ -202,7 +201,6 @@ main {
 
 .experience-container{
   @include wrapper;
-  // padding-top:15vh;
   padding:4vh 0;
   background-color:rgba(255, 255, 255, 0.897);
   color:black;

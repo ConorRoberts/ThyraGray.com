@@ -100,8 +100,7 @@ header {
   background-color: white;
   border: 1px solid black;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.575));
-  max-width: 40vw;
-  height: auto;
+  max-width: 45vw;
 }
 .intro-container .intro-content {
   display: flex;
@@ -137,8 +136,13 @@ header {
   justify-content: space-between;
 }
 
-.headshot-img {
+.headshot-container {
   width: 50%;
+  display: flex;
+  background-color: green;
+}
+.headshot-container .headshot-img {
+  max-width: 100%;
 }
 
 .info-module-container {
